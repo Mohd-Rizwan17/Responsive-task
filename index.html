@@ -22,38 +22,123 @@
       <nav>
         <i id="menu-icon" class="ri-menu-line"></i>
         <div class="nav-part-1">
-          <h3>Shop</h3>
-          <svg
-            class="down-arrow"
-            width="8"
-            height="5"
-            viewBox="0 0 8 5"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.500008 0.500008L3.74001 4.10007L6.98001 0.500008"
-              stroke="#201C1A"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <h3>Learn</h3>
-          <svg
-            class="down-arrow"
-            width="8"
-            height="5"
-            viewBox="0 0 8 5"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.500008 0.500008L3.74001 4.10007L6.98001 0.500008"
-              stroke="#201C1A"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
+          <div class="nav-item shop-dropdown">
+            <div class="nav-trigger">
+              <h3>Shop</h3>
+              <svg
+                class="down-arrow"
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.500008 0.500008L3.74001 4.10007L6.98001 0.500008"
+                  stroke="#201C1A"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="menu-col">
+                  <h4>Tea Varieties</h4>
+                  <ul>
+                    <li><a href="#">Whole Leaf Tea Sachets</a></li>
+                    <li><a href="#">Pure Matcha</a></li>
+                    <li><a href="#">Tea Lattes</a></li>
+                    <li><a href="#">Iced Tea</a></li>
+                  </ul>
+                  <button class="shop-all-btn">Shop All Teas</button>
+                </div>
+
+                <div class="menu-col">
+                  <h4>Collections</h4>
+                  <ul>
+                    <li><a href="#">Matcha</a></li>
+                    <li><a href="#">Chai</a></li>
+                    <li><a href="#">Organic Tea</a></li>
+                    <li><a href="#">Naked Tea Sachets</a></li>
+                    <li><a href="#">Black Tea</a></li>
+                    <li><a href="#">Green Tea</a></li>
+                    <li><a href="#">Herbal Tea</a></li>
+                    <li><a href="#">Caffeine-Free</a></li>
+                    <li><a href="#">Gifts & Samplers</a></li>
+                  </ul>
+                </div>
+
+                <div class="menu-col products-col">
+                  <h4>Shop Best Sellers</h4>
+                  <div class="menu-products">
+                    <div class="menu-product-card">
+                      <div
+                        class="prod-img-wrapper"
+                        style="background-color: #c1ee91"
+                      >
+                        <img
+                          src="https://www.twoleavestea.com/cdn/shop/files/matcha-tin_featured.webp?v=1771589563&width=600"
+                          alt="Ceremonial Matcha"
+                        />
+                      </div>
+                      <p>
+                        Ceremonial Matcha - <br />
+                        1 oz Tin
+                      </p>
+                    </div>
+
+                    <div class="menu-product-card">
+                      <div
+                        class="prod-img-wrapper"
+                        style="background-color: #ffd884"
+                      >
+                        <img
+                          src="https://www.twoleavestea.com/cdn/shop/files/Latte_Mix_b400f40c-730f-4122-9058-cfc4e5bf8faf.webp?v=1771389945&width=600"
+                          alt="Nice Chai"
+                        />
+                      </div>
+                      <p>Nice Chai Tea Latte Mix</p>
+                    </div>
+
+                    <div class="menu-product-card">
+                      <div
+                        class="prod-img-wrapper"
+                        style="background-color: #cce3ff"
+                      >
+                        <img
+                          src="https://www.twoleavestea.com/cdn/shop/files/organic_earl_gray_tea_sachet_featured.webp?v=1771575276&width=600"
+                          alt="Organic Earl Grey"
+                        />
+                      </div>
+                      <p>Organic Earl Grey Tea</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <h3>Learn</h3>
+            <svg
+              class="down-arrow"
+              width="8"
+              height="5"
+              viewBox="0 0 8 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.500008 0.500008L3.74001 4.10007L6.98001 0.500008"
+                stroke="#201C1A"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+
           <h3 class="h3-text">Reviews</h3>
           <svg
             class="star-arrow"
@@ -115,6 +200,7 @@
             ></path>
           </svg>
         </div>
+
         <div class="nav-part-2">
           <img
             src="https://www.twoleavestea.com/cdn/shop/files/Twoleaves_logo.svg?v=1768205424&width=420"
@@ -148,7 +234,6 @@
 
       <section id="section-1">
         <div class="slider-track">
-          <!-- First Image Slide (Matcha) -->
           <div class="slide slide-first">
             <div class="slide-content">
               <h1>Meet Your Matcha</h1>
@@ -190,7 +275,6 @@
         </div>
         <button class="btn-1">Best Sellers</button>
 
-        <!-- Cards Container Part -->
         <div class="card-container">
           <!-- card1 -->
           <div class="card">

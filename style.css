@@ -387,15 +387,15 @@ nav .nav-part-2 {
   border: 1px solid #000;
   background-color: #fff;
   font-family: Midnight;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   display: block;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .card-top-text span {
-  font-size: 1.1rem;
-  font-family: Reckless;
+  font-size: 0.9rem;
+  font-family: Figtree;
 }
 
 .card-top img {
@@ -525,9 +525,15 @@ nav .nav-part-2 {
   background-color: #2a2857;
   color: white;
   font-family: Figtree;
-  border-radius: 1.2rem;
+  border-radius: 1.9rem;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+.btm-btn:hover {
+  background-color: white;
+  color: #000;
+  border: 1px solid #000;
 }
 
 @media (min-width: 786px) {
@@ -583,4 +589,192 @@ nav .nav-part-2 {
     padding-left: 10%;
     padding-right: 5%;
   }
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.nav-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+.nav-item .down-arrow {
+  background-color: #c0dbff;
+  border-radius: 50%;
+  padding: 5px;
+  width: 18px;
+  height: 18px;
+  border: #000 solid 1px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.shop-dropdown:hover .down-arrow {
+  background-color: #ffb500;
+  transform: rotate(180deg);
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: -2rem;
+  width: calc(110vw - 90px);
+  max-width: 1521px;
+  height: 70vh;
+  background-color: #fffefb;
+  border: 1px solid #000;
+  border-top: 1px solid;
+  border-radius: 0 0 1rem 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1000;
+}
+
+.shop-dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-content {
+  display: flex;
+  gap: 5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-col h4 {
+  font-family: Figtree, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+.menu-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-col ul li {
+  margin-bottom: 0.8rem;
+}
+
+.menu-col ul li a {
+  text-decoration: none;
+  color: #201c1a;
+  width: 180px;
+  font-family: Figtree, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 3px;
+  display: inline-block;
+}
+
+.menu-col ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom left;
+  transition: transform 0.35s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.menu-col ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.shop-all-btn {
+  margin-top: 11rem;
+  padding: 1rem 1.9rem;
+  background-color: #2a2857;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-family: Figtree, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.2s;
+}
+
+.shop-all-btn:hover {
+  background-color: white;
+  color: #2a2857;
+  border: 1px solid #2a2857;
+}
+
+.products-col {
+  flex-grow: 1;
+  margin-left: 2rem;
+}
+
+.menu-products {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu-product-card {
+  width: 280px;
+  height: 600vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prod-img-wrapper {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.prod-img-wrapper img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.menu-product-card:hover img {
+  transform: scale(1.06);
+}
+
+.menu-product-card p {
+  font-family: Reckless, serif;
+  font-size: 1.5rem;
+  color: #201c1a;
+  line-height: 1;
+  margin-top: 0.5rem;
 }
