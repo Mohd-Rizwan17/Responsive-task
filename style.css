@@ -172,7 +172,7 @@ nav .nav-part-2 {
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-#section-1:hover .slider-track {
+#section-1:has(.arrow-right:hover) .slider-track {
   transform: translateX(-50%);
 }
 
@@ -240,6 +240,13 @@ nav .nav-part-2 {
   font-size: 1.1rem;
   margin-top: 2rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide button:hover {
+  background-color: white;
+  color: #2a2857;
+  border: 1px solid #2a2857;
 }
 
 .arrow-btn {
@@ -269,7 +276,7 @@ nav .nav-part-2 {
 
 .fixed-purple-btn {
   position: absolute;
-  bottom: 25px;
+  bottom: 10px;
   right: 25px;
   width: 60px;
   height: 60px;
@@ -287,20 +294,25 @@ nav .nav-part-2 {
 
 .fixed-blue-widget {
   position: fixed;
-  bottom: 25px;
+  bottom: 20px;
   left: 25px;
   width: 50px;
   height: 50px;
   background-color: #5cb3a9;
-  color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
   z-index: 1000;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-blue-widget svg {
+  width: 55%;
+  height: 55%;
+  color: #ffffff;
+  object-fit: contain;
 }
 
 #section-2 {
@@ -322,6 +334,7 @@ nav .nav-part-2 {
   font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 300;
   width: 60%;
+  margin-bottom: 150px;
 }
 
 #section-2 .btn-1 {
@@ -330,11 +343,11 @@ nav .nav-part-2 {
   font-family: Midnight;
   font-weight: 600;
   background-color: #daaeea;
-  border-radius: 1.2rem;
+  border-radius: 0.4rem;
   text-transform: uppercase;
-  margin-top: 5rem;
-  rotate: -5deg;
+  rotate: -2deg;
   letter-spacing: 2px;
+  margin-left: 600px;
 }
 
 #section-2 .card-container {
@@ -589,6 +602,17 @@ nav .nav-part-2 {
     padding-left: 10%;
     padding-right: 5%;
   }
+
+  #section-2 .btn-1 {
+    display: inline-block;
+  }
+
+  .card-container {
+    margin-top: 2rem;
+    justify-content: flex-start;
+    padding-left: 10%;
+    padding-right: 5%;
+  }
 }
 
 .nav-item {
@@ -627,9 +651,9 @@ nav .nav-part-2 {
   position: absolute;
   top: 100%;
   left: -2rem;
-  width: calc(110vw - 90px);
-  max-width: 1521px;
-  height: 70vh;
+  width: calc(110vw - 80px);
+  max-width: 1520.5px;
+  /* height: auto; */
   background-color: #fffefb;
   border: 1px solid #000;
   border-top: 1px solid;
@@ -684,7 +708,6 @@ nav .nav-part-2 {
 .menu-col ul li a {
   text-decoration: none;
   color: #201c1a;
-  width: 180px;
   font-family: Figtree, sans-serif;
   font-size: 1.05rem;
   font-weight: 400;
@@ -742,7 +765,7 @@ nav .nav-part-2 {
 
 .menu-product-card {
   width: 280px;
-  height: 600vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -750,6 +773,7 @@ nav .nav-part-2 {
 
 .prod-img-wrapper {
   width: 100%;
+  height: 240px;
   border-radius: 0.5rem;
   border: 1px solid #000;
   display: flex;
@@ -777,4 +801,85 @@ nav .nav-part-2 {
   color: #201c1a;
   line-height: 1;
   margin-top: 0.5rem;
+}
+
+.mega-menu2 {
+  position: absolute;
+  top: 100%;
+  left: -8rem;
+  width: calc(110vw - 80px);
+  max-width: 1523.5px;
+  /* height: 55vh; */
+  background-color: #fffefb;
+  border: 1px solid #000;
+  border-top: 1px solid;
+  border-radius: 0 0 1rem 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1000;
+}
+
+.learn-dropdown:hover .mega-menu2 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.learn-dropdown:hover .down-arrow {
+  background-color: #ffb500;
+  transform: rotate(180deg);
+}
+
+.learn-menu-content {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learn-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.learn-img-box {
+  width: 100%;
+  height: 38vh;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.learn-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.learn-card:hover .learn-img-box img {
+  transform: scale(1.05);
+}
+
+.learn-card p {
+  font-family: Reckless, serif;
+  font-size: 1.4rem;
+  color: #201c1a;
+  font-weight: 400;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.learn-card:hover p {
+  color: #2a2857;
 }
