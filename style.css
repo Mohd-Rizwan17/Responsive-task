@@ -1097,5 +1097,5 @@ nav .nav-part-2 {
 
 .vibe-pill:hover {
   background-color: #a2c9fc;
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */
 }
