@@ -884,6 +884,11 @@ nav .nav-part-2 {
   color: #2a2857;
 }
 
+#section-2 {
+  border-bottom: 2px solid #201c1a;
+  margin-bottom: 50px;
+}
+
 #section-3 {
   /* width: 100%; */
   min-height: 60vh;
@@ -896,11 +901,6 @@ nav .nav-part-2 {
   position: relative;
   gap: 1.5rem;
   margin-left: 150px;
-}
-
-#section-2 {
-  border-bottom: 2px solid #201c1a;
-  margin-bottom: 50px;
 }
 
 .discover-badge {
@@ -1097,5 +1097,5 @@ nav .nav-part-2 {
 
 .vibe-pill:hover {
   background-color: #a2c9fc;
-  /* transform: translateY(-1px); */
+  transform: translateY(-1px);
 }
